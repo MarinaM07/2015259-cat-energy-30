@@ -7,24 +7,15 @@
 }
 
 .present__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../../images/background-catalog-mobile@1x.jpg");
+  background-color: rgba(104, 183, 56, 0.85);
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 60px;
   padding-bottom: 43px;
   margin-bottom: 34px;
-}
-
-@media (min-resolution: 2dppx) {
-  .present__wrapper {
-    background-image: url("../../images/background-catalog-mobile@2x.jpg");
-    background-color: rgba(104, 183, 56, 0.85);
-    background-blend-mode: overlay;
-  }
 }
 
 .present__description {
@@ -53,12 +44,10 @@
   .present__wrapper {
     position: relative;
     background-image: url("../../images/background-catalog-tablet@1x.jpg");
-    width: 100%;
-    min-height: 200px;
     margin: 0 auto;
     padding-top: 71px;
     padding-bottom: 44px;
-    padding-left: 78px;
+    padding-left: 421px;
 
     margin-bottom: 5px;
 
@@ -73,8 +62,6 @@
     text-align: start;
     font-size: 16px;
     line-height: 20px;
-    margin-left: auto;
-    margin-right: 124px;
   }
 
   .present__wrapper::before {
@@ -91,15 +78,14 @@
 
 @media (min-width: $desktop-width) {
   .present__wrapper {
-    max-width: 244px;
-    min-height: 288px;
     flex-direction: column;
-    padding: 56px 42px 32px;
+    padding: 185px 0 43px;
+    width: 245px;
     margin-bottom: 0;
     background-size: auto 100%;
     background-image: url("../../images/background-catalog-desktop@1x.jpg");
 
-    @media (min-width: 1300px) and (min-resolution: 2dppx) {
+    @media (min-width: 1300px) {
       .present__wrapper {
         background-image: url("../../images/background-catalog-desktop@2x.jpg");
       }
@@ -113,6 +99,6 @@
 
   .present__description {
     text-align: center;
-    margin-top: 128px;
+    padding-left: 42px;
   }
 }

@@ -57,24 +57,28 @@
 
     <section class="promo">
       <div class="promo__wrapper">
-        <h2 class="promo__title">Функциональное<br>
-          питание для котов</h2>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        <div class="promo__description">
+          <h2 class="promo__title">Функциональное<br>
+            питание для котов</h2>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <a class="promo__link button" href="form.html">Подобрать программу</a>
+        </div>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
-            srcset="images/promo-cup-desktop@1x.webp 1x, images/promo-cup-desktop@2x.webp 2x">
+            srcset="images/promo-cup-desktop@1x.webp 1x, images/promo-cup-desktop@2x.webp 2x" width="552" height="499">
           <source type="image/webp" media="(min-width: 768px)"
-            srcset="images/promo-cup-tablet@1x.webp 1x, images/promo-cup-tablet@2x.webp 2x">
+            srcset="images/promo-cup-tablet@1x.webp 1x, images/promo-cup-tablet@2x.webp 2x" width="709" height="609">
           <source type="image/webp" srcset="images/promo-cup-mobile@1x.webp 1x, images/promo-cup-mobile@2x.webp 2x">
 
           <source type="image/png" media="(min-width: 1440px)"
             srcset="images/promo-cup-desktop@1x.png 1x, images/promo-cup-desktop@2x.png 2x" width="552" height="499">
           <source type="image/png" media="(min-width: 768px)"
-            srcset="images/promo-cup-tablet@1x.png 1x, images/promo-cup-tablet@2x.png 2x" width="709" height="609">
+            srcset="images/promo-cup-tablet@1x.png 1x, source/images/promo-cup-tablet@2x.png 2x" width="709"
+            height="609">
           <img class="promo__img" src="/source/images/promo-cup-mobile@1x.png"
             srcset="images/promo-cup-mobile@2x.png 2x" width="280" height="270" alt="Кошачья еда со вкусом курицы">
         </picture>
-        <a class="promo__link button" href="form.html">Подобрать программу</a>
+
       </div>
     </section>
 
@@ -138,28 +142,44 @@
         </div>
       </div>
 
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)"
-          srcset="images/slider-desktop@1x.webp 1x, images/slider-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)"
-          srcset="images/slider-tablet@1x.webp 1x, images/slider-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="images/slider-mobile@1x.webp 1x, images/slider-mobile@2x.webp 2x">
+      <div class="example__container">
+        <div class="example__slider">
+          <div class="before">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="images/cat-slider/tablet-before@1x.webp 1x, images/cat-slider/tablet-before@2x.webp 2x">
+              <source type="image/webp"
+                srcset="images/cat-slider/mobile-before@1x.webp 1x, images/cat-slider/mobile-before@2x.webp 2x">
 
-        <source type="image/png" media="(min-width: 1440px)"
-          srcset="images/slider-desktop@1x.png 1x, images/slider-desktop@2x.png 2x">
-        <source type="image/png" media="(min-width: 768px)"
-          srcset="images/slider-tablet@1x.png 1x, images/slider-tablet@2x.png 2x">
-        <img class="example__img" src="/source/images/slider-mobile@1x.png" srcset="images/promo-cup-mobile@2x.png 2x"
-          width="280" height="270" alt="Толстый и худой кот">
-      </picture>
+              <source type="image/png" media="(min-width: 768px)"
+                srcset="images/cat-slider/tablet-before@1x.png 1x, images/tablet-before@2x.png 2x">
+              <img class="example__img example__img-fat" src="/source/images/cat-slider/mobile-before@1x.png"
+                srcset="images/cat-slider/mobile-before@2x.png 2x" width="280" height="256" alt="Толстый кот">
+            </picture>
+          </div>
 
-      <div class="example__range-bar">
-        <button class="example__range-toggle" type="button" aria-label="Передвижение слайдера">
-          <svg width="40" height="40">
-            <use href="images/sprite.svg#icon-range-toggle"></use>
-          </svg>
-        </button>
-      </div>
+          <div class="after">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="images/cat-slider/tablet-after@1x.webp 1x, images/cat-slider/tablet-after@2x.webp 2x">
+              <source type="image/webp"
+                srcset="images/cat-slider/mobile-after@1x.webp 1x, images/cat-slider/mobile-after@2x.webp 2x">
+
+              <source type="image/png" media="(min-width: 768px)"
+                srcset="images/cat-slider/tablet-after@1x.png 1x, images/cat-slider/tablet-after@2x.png 2x">
+              <img class="example__img example__img-thin" src="/source/images/cat-slider/mobile-after@1x.png"
+                srcset="images/cat-slider/mobile-after@2x.png 2x" width="280" height="256" alt="Худой кот">
+            </picture>
+          </div>
+
+          <div class="example__range-bar">
+            <button class="example__range-toggle" type="button" aria-label="Передвижение слайдера">
+              <svg width="40" height="40">
+                <use href="images/sprite.svg#icon-range-toggle"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
     </section>
@@ -172,10 +192,20 @@
             class="contacts__town">Санкт-Петербург</span></span>
       </div>
       <div class="contacts__map-wrapper">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.237169710007!2d30.318251659406503!3d59.93871994200683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1706432177645!5m2!1sru!2sru"
-          width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="./images/map-desktop@1x.webp 1x, ./images/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="./images/map-tablet@1x.webp 1x, ./images/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./images/map-mobile@1x.webp 1x, ./images/map-mobile@2x.webp 2x">
+
+          <source type="image/png" media="(min-width: 1440px)"
+            srcset="./images/map-desktop@1x.png 1x, ./images/map-desktop@2x.png 2x">
+          <source type="image/png" media="(min-width: 768px)"
+            srcset="./images/map-tablet@1x.png 1x, ./images/map-tablet@2x.png 2x">
+          <img class="contacts__map-image" src="./images/map-mobile@1x.png" srcset="./images/map-mobile@2x.png 2x"
+            alt="На карте отмечен офис Cat Energy">
+        </picture>
       </div>
     </section>
   </main>
@@ -215,6 +245,7 @@
     </div>
   </footer>
   <script src="scripts/index.js"></script>
+  <script src="scripts/slider.js"></script>
 </body>
 
 </html>
