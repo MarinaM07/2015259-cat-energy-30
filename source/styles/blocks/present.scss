@@ -7,6 +7,9 @@
 }
 
 .present__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url("../../images/background-catalog-mobile@1x.jpg");
   background-color: rgba(104, 183, 56, 0.85);
   background-blend-mode: overlay;
@@ -16,32 +19,8 @@
   padding-top: 60px;
   padding-bottom: 43px;
   margin-bottom: 34px;
-}
 
-.present__description {
-  width: 161px;
-  margin: 0;
-  color: #ffffff;
-  text-align: center;
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.present__wrapper::before {
-  content: "";
-  display: block;
-  background-image: url("../../images/sprite.svg#icon__present");
-  width: 78px;
-  height: 80px;
-  background-size: 78px 80px;
-  margin-bottom: 48px;
-}
-
-@media (min-width: $tablet-width) {
-  .present__wrapper {
+  @media (min-width: $tablet-width) {
     position: relative;
     background-image: url("../../images/background-catalog-tablet@1x.jpg");
     margin: 0 auto;
@@ -58,27 +37,7 @@
     }
   }
 
-  .present__description {
-    text-align: start;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .present__wrapper::before {
-    position: absolute;
-    width: 80px;
-    height: 82px;
-    background-size: 80px 82px;
-    margin-bottom: 0;
-    right: auto;
-    left: 79px;
-    top: 59px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .present__wrapper {
-    flex-direction: column;
+  @media (min-width: $desktop-width) {
     padding: 185px 0 43px;
     width: 245px;
     margin-bottom: 0;
@@ -91,14 +50,52 @@
       }
     }
   }
+}
 
-  .present__wrapper::before {
-    margin: 0;
-    margin-bottom: 46px;
+.present__description {
+  width: 161px;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+    font-size: 16px;
+    line-height: 20px;
   }
 
-  .present__description {
+  @media (min-width: $desktop-width) {
     text-align: center;
-    padding-left: 42px;
+  }
+}
+
+.present__wrapper::before {
+  content: "";
+  display: block;
+  background-image: url("../../images/sprite.svg#icon__present");
+  width: 78px;
+  height: 80px;
+  background-size: 78px 80px;
+  margin-bottom: 48px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 80px;
+    height: 82px;
+    background-size: 80px 82px;
+    margin-bottom: 0;
+    right: auto;
+    left: 79px;
+    top: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 46px;
   }
 }
