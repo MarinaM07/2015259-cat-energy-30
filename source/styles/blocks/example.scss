@@ -209,6 +209,9 @@
 }
 
 .example__container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
 
   @media (min-width: $desktop-width) {
     position: absolute;
@@ -221,13 +224,14 @@
   position: relative;
   width: 280px;
   height: 256px;
-  left: 20px;
-  padding-top: 130px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     width: 560px;
     height: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
     left: 20%;
   }
 }
