@@ -18,38 +18,28 @@
     right: 0;
     z-index: -1;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .promo {
+  @media (min-width: $tablet-width) {
+    min-height: 875px;
+
     &::before {
       background-color: #ffffff;
       background-image: none;
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .promo::before {
-    content: "";
-    background-image: url("../../images/index-background@1x.jpg");
-    background-color: rgba(104, 183, 56, 0.85);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center left;
-    position: absolute;
-    width: 720px;
-    height: 694px;
-    top: 0;
-    left: auto;
-    right: 0;
-  }
-}
+  @media (min-width: $desktop-width) {
+    min-height: 520px;
 
-@media (min-width: $desktop-width) {
-  .promo::before {
-    background-image: url("../../images/index-background@2x.jpg");
+    &::before {
+      background-image: url("../../images/index-background@2x.jpg");
+      background-color: rgba(104, 183, 56, 0.85);
+      width: 720px;
+      height: 694px;
+      top: -175px;
+      left: auto;
+      right: 0;
+    }
   }
 }
 
@@ -58,28 +48,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-@media (min-width: $tablet-width) {
-  .promo__wrapper {
-    padding: 27px 20px 0 20px;
-    text-align: left;
+  @media (min-width: $tablet-width) {
+    padding: 27px 20px 0 120px;
+    align-items: flex-start;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .promo__wrapper {
-    margin-left: 169px;
-    margin-top: 197px;
-    min-height: 499px;
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    padding-left: 190px;
   }
 }
 
 .promo__description {
-
-  @media (min-width: $tablet-width) {
-  padding-left: 70px;
-  }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
@@ -134,16 +115,17 @@
     max-width: max-content;
     display: block;
 
-    position: relative;
+    position: absolute;
+    left: 50px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .promo__img {
     position: absolute;
-    top: -52px;
+    top: -30px;
     left: 25%;
-    transform: translateX(50%);
+    transform: translateX(36%);
   }
 }
 
